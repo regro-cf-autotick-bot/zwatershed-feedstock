@@ -13,7 +13,7 @@ source:
 
 build:
   skip: true  # [win or py3k]
-  number: 0
+  number: 1
   script:
     # FIXME: This is a hack to make sure the environment is activated.
     # The reason this is required is due to the conda-build issue
@@ -27,7 +27,7 @@ build:
 requirements:
   build:
     - toolchain
-    - boost 1.61.*
+    - boost 1.62.*
     - python
     - setuptools >=18.0
     - numpy x.x
@@ -36,7 +36,7 @@ requirements:
     - h5py
 
   run:
-    - boost 1.61.*
+    - boost 1.62.*
     - python
     - numpy x.x
     - numpy >=1.7
