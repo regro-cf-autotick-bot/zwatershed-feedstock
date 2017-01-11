@@ -13,21 +13,13 @@ source:
 
 build:
   skip: true  # [win or py3k]
-  number: 1
-  script:
-    # FIXME: This is a hack to make sure the environment is activated.
-    # The reason this is required is due to the conda-build issue
-    # mentioned below.
-    #
-    # https://github.com/conda/conda-build/issues/910
-    #
-    - source activate "${CONDA_DEFAULT_ENV}"
-    - python setup.py install --single-version-externally-managed --record record.txt
+  number: 2
+  script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - toolchain
-    - boost 1.62.*
+    - boost 1.63.*
     - python
     - setuptools >=18.0
     - numpy x.x
@@ -36,7 +28,7 @@ requirements:
     - h5py
 
   run:
-    - boost 1.62.*
+    - boost 1.63.*
     - python
     - numpy x.x
     - numpy >=1.7
