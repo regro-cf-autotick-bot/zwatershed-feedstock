@@ -13,13 +13,13 @@ source:
 
 build:
   skip: true  # [win or py3k]
-  number: 2
+  number: 3
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
     - toolchain
-    - boost 1.63.*
+    - boost 1.64.*
     - python
     - setuptools >=18.0
     - numpy x.x
@@ -28,7 +28,7 @@ requirements:
     - h5py
 
   run:
-    - boost 1.63.*
+    - boost 1.64.*
     - python
     - numpy x.x
     - numpy >=1.7
