@@ -19,7 +19,7 @@ build:
 requirements:
   build:
     - toolchain
-    - boost 1.64.*
+    - boost 1.65.1
     - python
     - setuptools >=18.0
     - numpy 1.11.*
@@ -28,7 +28,7 @@ requirements:
     - h5py
 
   run:
-    - boost 1.64.*
+    - boost 1.65.1
     - python
     - numpy >=1.11
     - numpy >=1.7
