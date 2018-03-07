@@ -1,6 +1,6 @@
 {% set name = "zwatershed" %}
 {% set version = "0.10" %}
-{% set checksum = "c3a292d5bbb058cbc5c5cc908d4ec60a" %}
+{% set checksum = "4892f63d5aefb7dd5ae199c4481e94c88ce7e398d30cd90fa45fa555587ff5c1" %}
 
 package:
   name: {{ name }}
@@ -9,7 +9,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  md5: {{ checksum }}
+  sha256: {{ checksum }}
 
 build:
   skip: true  # [win or py3k]
