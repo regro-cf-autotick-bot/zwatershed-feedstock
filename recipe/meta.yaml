@@ -1,6 +1,6 @@
 {% set name = "zwatershed" %}
-{% set version = "0.8" %}
-{% set checksum = "e48b08909ad95785d9adfee0d1f8d318" %}
+{% set version = "0.10" %}
+{% set checksum = "c3a292d5bbb058cbc5c5cc908d4ec60a" %}
 
 package:
   name: {{ name }}
@@ -13,7 +13,7 @@ source:
 
 build:
   skip: true  # [win or py3k]
-  number: 4
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
