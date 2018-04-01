@@ -1,6 +1,6 @@
 {% set name = "zwatershed" %}
-{% set version = "0.8" %}
-{% set checksum = "e48b08909ad95785d9adfee0d1f8d318" %}
+{% set version = "0.10" %}
+{% set checksum = "4892f63d5aefb7dd5ae199c4481e94c88ce7e398d30cd90fa45fa555587ff5c1" %}
 
 package:
   name: {{ name }}
@@ -9,11 +9,11 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  md5: {{ checksum }}
+  sha256: {{ checksum }}
 
 build:
   skip: true  # [win or py3k]
-  number: 5
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
