@@ -25,14 +25,12 @@ requirements:
     - python
     - setuptools >=18.0
     - numpy
-    - numpy
     - cython >=0.23
     - h5py
 
   run:
     - boost
     - python
-    - {{ pin_compatible('numpy') }}
     - {{ pin_compatible('numpy') }}
     - h5py
 
