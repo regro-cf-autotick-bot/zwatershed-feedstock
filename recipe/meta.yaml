@@ -13,25 +13,25 @@ source:
 
 build:
   skip: true  # [win or py3k]
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
   build:
-    - toolchain
-    - boost 1.66.0
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - boost
     - python
     - setuptools >=18.0
-    - numpy 1.11.*
-    - numpy >=1.7
+    - numpy
     - cython >=0.23
     - h5py
 
   run:
-    - boost 1.66.0
+    - boost
     - python
-    - numpy >=1.11
-    - numpy >=1.7
+    - {{ pin_compatible('numpy') }}
     - h5py
 
 test:
